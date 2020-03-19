@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.Hero {
+	display: flex;
+	height: 100vh;
+}
+
+.barra-menu {
+	width: 5%;
+}
+
+.info-hero {
+	width: 60%;
+	background-image: url('/img/hero.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-y: -280px;
+	position: relative;
+	overflow: hidden;
+}
+
+.services-video {
+	width: 35%;
+	background: #323232;
+}
+
+.hero-title {
+	font-size: 3em;
+	color: white;
+	font-weight: bold;
+}
+
+.hero-effect {
+	display: block;
+	position: absolute;
+	color: transparent;
+	font-size: 6.5em;
+	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	font-weight: 800;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.abstract-effect {
+	right: -160px;
+	bottom: 218px;
+}
+
+.code-effect {
+	top: 85px;
+	right: -115px;
+}
