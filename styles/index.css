@@ -10,28 +10,56 @@
 }
 
 .barra-menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
 	width: 5%;
+	background: rgba(30, 30, 30, 0.8);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+	z-index: 50;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 0;
+}
+
+.logo {
+	width: 50%;
+}
+
+.bandera {
+	width: 30%;
 }
 
 .info-hero {
-	width: 60%;
+	width: 65%;
 	background-image: url('/img/hero.jpg');
+	padding-left: 10%;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position-y: -280px;
+	background-position-y: center;
 	position: relative;
 	overflow: hidden;
+	color: white;
+}
+
+.texto-hero {
+	padding-top: 125px;
 }
 
 .services-video {
 	width: 35%;
-	background: #323232;
+	background: #1e1e1e;
 }
 
 .hero-title {
 	font-size: 3em;
 	color: white;
 	font-weight: bold;
+	padding-top: 100px;
 }
 
 .hero-effect {

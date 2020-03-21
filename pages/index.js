@@ -17,11 +17,23 @@ const Home = () => {
 				<title>Document</title>
 			</Head>
 			<div className="Hero">
-				<div className="barra-menu"></div>
+				<div className="barra-menu">
+					<img className="logo" src="/img/LogoWhite.svg" alt="Abstract Code" />
+					<img
+						className="bandera"
+						src="/img/Colombia.svg"
+						alt="Abstract Code"
+					/>
+				</div>
 				<div className="info-hero">
-					<span className="hero-title">
-						Piezas de software que transforman al mundo
-					</span>
+					<div className="texto-hero">
+						<div>
+							<span>Colombia</span>
+						</div>
+						<div className="hero-title">
+							<span>Piezas de software que transforman al mundo</span>
+						</div>
+					</div>
 					<span className="hero-effect abstract-effect">Abstract</span>
 					<span className="hero-effect code-effect">Code</span>
 				</div>
