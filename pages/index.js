@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import '../styles/index.css'
+import Navbar from '../components/Navbar'
+import Link from 'next/link'
 
 const Home = () => {
 	return (
@@ -14,28 +16,31 @@ const Home = () => {
 					href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
 					rel="stylesheet"
 				/>
-				<title>Document</title>
+				<link rel="icon" href="/img/LogoBlack.svg" />
+				<title>Abstract Code</title>
 			</Head>
 			<div className="Hero">
-				<div className="barra-menu">
-					<img className="logo" src="/img/LogoWhite.svg" alt="Abstract Code" />
-					<img
-						className="bandera"
-						src="/img/Colombia.svg"
-						alt="Abstract Code"
-					/>
-				</div>
+				<Navbar />
 				<div className="info-hero">
+					<div className="color-bg-hero"></div>
 					<div className="texto-hero">
 						<div>
-							<span>Colombia</span>
+							<span className="noUserSelect">Colombia</span>
 						</div>
 						<div className="hero-title">
 							<span>Piezas de software que transforman al mundo</span>
 						</div>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+						<Link href="">
+							<a className="button-transparent noUserSelect">
+								<div>Lorem</div>
+							</a>
+						</Link>
 					</div>
-					<span className="hero-effect abstract-effect">Abstract</span>
-					<span className="hero-effect code-effect">Code</span>
+					<span className="hero-effect abstract-effect noUserSelect">
+						Abstract
+					</span>
+					<span className="hero-effect code-effect noUserSelect">Code</span>
 				</div>
 				<div className="services-video"></div>
 			</div>
