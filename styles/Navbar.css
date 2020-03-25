@@ -8,7 +8,7 @@
 }
 #hamburger-icon .line {
 	display: block;
-	background: #666;
+	background: rgb(156, 156, 156);
 	width: 2em;
 	height: 0.06em;
 	position: absolute;

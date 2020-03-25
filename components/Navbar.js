@@ -14,7 +14,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<div className="barra-menu">
+		<header className="barra-menu">
 			<img
 				className="logo noUserSelect"
 				src="/img/LogoWhite.svg"
@@ -30,7 +30,7 @@ const Navbar = () => {
 				src="/img/Colombia.svg"
 				alt="Abstract Code"
 			/>
-		</div>
+		</header>
 	)
 }
 
