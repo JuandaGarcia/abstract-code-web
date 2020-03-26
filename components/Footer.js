@@ -6,7 +6,22 @@ const Footer = () => {
 		<footer>
 			<div className="footer-container">
 				<div className="item-footer">
-					<img loading="lazy" src="/img/lw.png" alt="logo" />
+					<img
+						className="noUserSelect"
+						loading="lazy"
+						src="/img/lw.png"
+						alt="logo"
+					/>
+					<ul>
+						<li>
+							<Link href="">
+								<a className="social-link">
+									<img src="/img/instagram.svg" alt="instagram" />
+									<span>Instagram</span>
+								</a>
+							</Link>
+						</li>
+					</ul>
 				</div>
 				<div className="item-footer">
 					<div>
@@ -27,7 +42,30 @@ const Footer = () => {
 						</ul>
 					</div>
 				</div>
-				<div className="item-footer">sdfsdf</div>
+				<div className="item-footer">
+					<div>
+						<span>
+							<strong>Compañía</strong>
+						</span>
+						<ul>
+							<li>
+								<Link href="">
+									<a>Contacto</a>
+								</Link>
+							</li>
+							<li>
+								<Link href="">
+									<a>Trabaja con Nosotros</a>
+								</Link>
+							</li>
+							<li>
+								<Link href="">
+									<a>Legal</a>
+								</Link>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<div className="copyright">
 				<span>© Abstract Code 2020</span>

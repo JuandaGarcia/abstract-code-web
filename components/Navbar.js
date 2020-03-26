@@ -1,35 +1,71 @@
 import '../styles/index.css'
 import React, { useState } from 'react'
 import '../styles/Navbar.css'
+import Link from 'next/link'
 
 const Navbar = () => {
 	const [stateBurger, setStateBurger] = useState('')
+	const [activeMenu, setActiveMenu] = useState('')
+	const [closeMenu, setCloseMenu] = useState('')
 
 	const toggleMenu = () => {
 		if (stateBurger === 'active') {
 			setStateBurger('')
+			setActiveMenu('')
+			setCloseMenu('')
 		} else {
 			setStateBurger('active')
+			setActiveMenu('menu-active')
+			setCloseMenu('active-close')
 		}
 	}
 
 	return (
-		<header className="barra-menu">
-			<img
-				className="logo noUserSelect"
-				src="/img/LogoWhite.svg"
-				alt="Abstract Code"
-			/>
-			<div id="hamburger-icon" className={stateBurger} onClick={toggleMenu}>
-				<span className="line line-1"></span>
-				<span className="line line-2"></span>
-				<span className="line line-3"></span>
+		<header>
+			<div className="barra-menu">
+				<img
+					className="logo noUserSelect"
+					src="/img/LogoWhite.svg"
+					alt="Abstract Code"
+				/>
+				<div id="hamburger-icon" className={stateBurger} onClick={toggleMenu}>
+					<span className="line line-1"></span>
+					<span className="line line-2"></span>
+					<span className="line line-3"></span>
+				</div>
+				<img
+					className="bandera noUserSelect"
+					src="/img/Colombia.svg"
+					alt="Abstract Code"
+				/>
 			</div>
-			<img
-				className="bandera noUserSelect"
-				src="/img/Colombia.svg"
-				alt="Abstract Code"
-			/>
+			<div className={`menu ${activeMenu}`}>
+				<nav>
+					<ul>
+						<li>
+							<Link href="">
+								<a onClick={toggleMenu}>Inicio</a>
+							</Link>
+						</li>
+						<li>
+							<Link href="">
+								<a onClick={toggleMenu}>Diseño web</a>
+							</Link>
+						</li>
+						<li>
+							<Link href="">
+								<a onClick={toggleMenu}>Diseño UI/UX</a>
+							</Link>
+						</li>
+						<li>
+							<Link href="">
+								<a onClick={toggleMenu}>Contacto</a>
+							</Link>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div onClick={toggleMenu} className={`close-menu ${closeMenu}`}></div>
 		</header>
 	)
 }

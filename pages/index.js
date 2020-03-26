@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import '../styles/index.css'
+import '../styles/scroll-icon.css'
 import Layout from '../components/Layout'
 import Link from 'next/link'
 
@@ -20,7 +21,7 @@ const Home = () => {
 				<title>Abstract Code</title>
 			</Head>
 			<Layout>
-				<section className="Hero">
+				<section className="hero">
 					<div className="info-hero">
 						<div className="color-bg-hero"></div>
 						<div className="texto-hero">
@@ -28,7 +29,10 @@ const Home = () => {
 								<span className="noUserSelect">Colombia</span>
 							</div>
 							<div className="hero-title">
-								<span>Piezas de software que transforman al mundo</span>
+								<span>
+									Lorem ipsum dolor, <br />
+									sit amet consectetur adipisicing.
+								</span>
 							</div>
 							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 							<Link href="">
@@ -42,10 +46,32 @@ const Home = () => {
 						</span>
 						<span className="hero-effect code-effect noUserSelect">Code</span>
 					</div>
-					<div className="services-video"></div>
+					<div className="services-video">
+						<div className="services-video-container">
+							<span>
+								<strong>Servicios</strong>
+							</span>
+							<br />
+							<br />
+							<ul>
+								<li>
+									<Link href="">
+										<a>Desarrollo Web</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="">
+										<a>Diseño UI/UX</a>
+									</Link>
+								</li>
+							</ul>
+						</div>
+						<img src="/img/video.jpg" alt="video" />
+					</div>
+					<div className="scroll-icon"></div>
 				</section>
-				<section className="first-info-landing">
-					<div className="text-first-info">
+				<section className="info-landing">
+					<div className="text-info">
 						<span>Sobre</span>
 						<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
 						<br />
@@ -69,14 +95,14 @@ const Home = () => {
 						alt="img"
 					/>
 				</section>
-				<section className="second-info-landing">
+				<section className="info-landing yellow">
 					<img
 						className="noUserSelect"
 						loading="lazy"
 						src="/img/info.png"
 						alt="img"
 					/>
-					<div className="text-first-info">
+					<div className="text-info">
 						<span>Sobre</span>
 						<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
 						<br />
@@ -93,6 +119,31 @@ const Home = () => {
 							</a>
 						</Link>
 					</div>
+				</section>
+				<section className="info-landing">
+					<div className="text-info">
+						<span>Sobre</span>
+						<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+						<br />
+						<br />
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+							neque ipsam perspiciatis eius tempore est consectetur quisquam ad
+							reprehenderit. Iure fugiat quas consequatur numquam illum, neque
+							exercitationem amet delectus quod.
+						</p>
+						<Link href="">
+							<a className="button-black noUserSelect">
+								<div>Lorem</div>
+							</a>
+						</Link>
+					</div>
+					<img
+						className="noUserSelect"
+						loading="lazy"
+						src="/img/info.png"
+						alt="img"
+					/>
 				</section>
 				<section className="frase">
 					<img
@@ -112,8 +163,14 @@ const Home = () => {
 						<span>— Bill Gates, Microsoft Founder</span>
 					</div>
 				</section>
-				<section className="first-info-landing">
-					<div className="text-first-info">
+				<section className="info-landing gray">
+					<img
+						className="noUserSelect"
+						loading="lazy"
+						src="/img/banana.jpg"
+						alt="img"
+					/>
+					<div className="text-info">
 						<span>Sobre</span>
 						<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
 						<br />
@@ -130,12 +187,6 @@ const Home = () => {
 							</a>
 						</Link>
 					</div>
-					<img
-						className="noUserSelect"
-						loading="lazy"
-						src="/img/info.png"
-						alt="img"
-					/>
 				</section>
 			</Layout>
 		</React.Fragment>

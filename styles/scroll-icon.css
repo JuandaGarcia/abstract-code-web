@@ -1,0 +1,68 @@
+.scroll-icon {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 2em;
+	width: 1.2em;
+	font-size: 22px;
+	color: rgba(255, 255, 255, 0.5);
+	border-radius: 2em;
+	border: solid 2px;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	position: absolute;
+	left: 50%;
+	bottom: 40px;
+}
+
+.scroll-icon:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	color: #fff;
+}
+
+.scroll-icon::after {
+	content: '';
+	width: 5px;
+	height: 5px;
+	background-color: #fff;
+	border-radius: 50%;
+	-webkit-animation: scroll-icon 2.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+	animation: scroll-icon 2.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@-webkit-keyframes scroll-icon {
+	0% {
+		-webkit-transform: translateY(-12px);
+		transform: translateY(-12px);
+		opacity: 0;
+	}
+	30%,
+	70% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateY(12px);
+		transform: translateY(12px);
+		opacity: 0;
+	}
+}
+
+@keyframes scroll-icon {
+	0% {
+		-webkit-transform: translateY(-12px);
+		transform: translateY(-12px);
+		opacity: 0;
+	}
+	30%,
+	70% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateY(12px);
+		transform: translateY(12px);
+		opacity: 0;
+	}
+}
