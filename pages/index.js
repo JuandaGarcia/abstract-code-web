@@ -89,7 +89,7 @@ const Home = () => {
 						</Link>
 					</div>
 					<img
-						className="noUserSelect"
+						className="noUserSelect img-info-landing"
 						loading="lazy"
 						src="/img/info.png"
 						alt="img"
@@ -97,9 +97,9 @@ const Home = () => {
 				</section>
 				<section className="info-landing yellow">
 					<img
-						className="noUserSelect"
+						className="noUserSelect web-img-landing"
 						loading="lazy"
-						src="/img/info.png"
+						src="/img/web.png"
 						alt="img"
 					/>
 					<div className="text-info">
@@ -120,7 +120,7 @@ const Home = () => {
 						</Link>
 					</div>
 				</section>
-				<section className="info-landing">
+				<section className="info-landing gray">
 					<div className="text-info">
 						<span>Sobre</span>
 						<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
@@ -139,9 +139,9 @@ const Home = () => {
 						</Link>
 					</div>
 					<img
-						className="noUserSelect"
+						className="noUserSelect img-info-landing"
 						loading="lazy"
-						src="/img/info.png"
+						src="/img/ui-ux.png"
 						alt="img"
 					/>
 				</section>
@@ -165,27 +165,23 @@ const Home = () => {
 				</section>
 				<section className="info-landing gray">
 					<img
-						className="noUserSelect"
+						className="noUserSelect img-info-landing"
 						loading="lazy"
 						src="/img/banana.jpg"
 						alt="img"
 					/>
-					<div className="text-info">
-						<span>Sobre</span>
-						<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-						<br />
-						<br />
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-							neque ipsam perspiciatis eius tempore est consectetur quisquam ad
-							reprehenderit. Iure fugiat quas consequatur numquam illum, neque
-							exercitationem amet delectus quod.
-						</p>
-						<Link href="">
-							<a className="button-black noUserSelect">
-								<div>Lorem</div>
-							</a>
-						</Link>
+					<div className="text-info aling-form">
+						<form>
+							<h1>Contacto</h1>
+							<span>Sobre</span>
+							<br />
+							<input placeholder="Nombre" type="text" name="" id="" />
+							<input placeholder="E-mail" type="email" name="" id="" />
+							<input placeholder="Teléfono" type="number" name="" id="" />
+							<input placeholder="País" type="text" name="" id="" />
+							<textarea placeholder="Mensaje" name="" id="" rows="5"></textarea>
+							<input type="submit" value="Enviar" />
+						</form>
 					</div>
 				</section>
 			</Layout>

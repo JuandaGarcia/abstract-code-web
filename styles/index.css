@@ -289,8 +289,12 @@ li {
 	flex-wrap: wrap;
 }
 
-.info-landing img {
+.img-info-landing {
 	width: 40%;
+	pointer-events: none;
+}
+.web-img-landing {
+	height: 100%;
 	pointer-events: none;
 }
 
@@ -388,4 +392,79 @@ nav ul li {
 	margin: 20px 0;
 	padding: 20px 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 70%;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'] {
+	width: calc(100% - 12px);
+	height: 50px;
+	border: 3px solid #000;
+	border-radius: 5px;
+	outline: none;
+	user-select: auto;
+	font-size: 14px;
+	padding-left: 12px;
+	background: #eeeeee;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+textarea {
+	width: calc(100% - 24px);
+	height: 60px;
+	border: 3px solid #000;
+	border-radius: 5px;
+	outline: none;
+	user-select: auto;
+	font-size: 14px;
+	padding: 12px;
+	resize: none;
+	background: #eeeeee;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+textarea:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus {
+	border: 3px solid #ffc700;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='submit'] {
+	width: calc(100% + 6px);
+	height: 50px;
+	border: 3px solid #000;
+	border-radius: 5px;
+	outline: none;
+	user-select: auto;
+	font-size: 14px;
+	background: black;
+	font-weight: bold;
+	color: white;
+	transition: all 0.2s;
+}
+
+input[type='submit']:hover {
+	background: #10a957;
+	border-color: #10a957;
+}
+
+.aling-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
