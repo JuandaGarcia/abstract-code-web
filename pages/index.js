@@ -11,12 +11,8 @@ const Home = () => {
 			<Head>
 				<meta
 					name="viewport"
-					content="width=device-width, initial-scale=1.0"
+					content="width=device-width, initial-scale=1.0, user-scalable=no"
 				></meta>
-				<link
-					href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
-					rel="stylesheet"
-				/>
 				<link rel="icon" href="/img/LogoBlack.svg" />
 				<title>Abstract Code</title>
 			</Head>
@@ -29,10 +25,10 @@ const Home = () => {
 								<span className="noUserSelect">Colombia</span>
 							</div>
 							<div className="hero-title">
-								<span>
+								<h1>
 									Lorem ipsum dolor, <br />
 									sit amet consectetur adipisicing.
-								</span>
+								</h1>
 							</div>
 							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 							<Link href="">
@@ -55,7 +51,7 @@ const Home = () => {
 							<br />
 							<ul>
 								<li>
-									<Link href="">
+									<Link href="/web">
 										<a>Desarrollo Web</a>
 									</Link>
 								</li>
@@ -95,7 +91,7 @@ const Home = () => {
 						alt="img"
 					/>
 				</section>
-				<section className="info-landing yellow">
+				<section className="info-landing yellow wrap-reverse">
 					<img
 						className="noUserSelect web-img-landing"
 						loading="lazy"
@@ -163,7 +159,7 @@ const Home = () => {
 						<span>— Bill Gates, Microsoft Founder</span>
 					</div>
 				</section>
-				<section className="info-landing gray">
+				<section className="info-landing gray wrap-reverse">
 					<img
 						className="noUserSelect img-info-landing"
 						loading="lazy"

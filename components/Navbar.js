@@ -43,13 +43,13 @@ const Navbar = () => {
 				<nav>
 					<ul>
 						<li>
-							<Link href="">
+							<Link href="/">
 								<a onClick={toggleMenu}>Inicio</a>
 							</Link>
 						</li>
 						<li>
-							<Link href="">
-								<a onClick={toggleMenu}>Diseño web</a>
+							<Link href="/web">
+								<a onClick={toggleMenu}>Desarrollo web</a>
 							</Link>
 						</li>
 						<li>

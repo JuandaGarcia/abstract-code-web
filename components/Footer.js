@@ -30,7 +30,7 @@ const Footer = () => {
 						</span>
 						<ul>
 							<li>
-								<Link href="">
+								<Link href="/web">
 									<a>Desarrollo Web</a>
 								</Link>
 							</li>
