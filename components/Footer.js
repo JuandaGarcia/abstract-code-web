@@ -6,20 +6,26 @@ const Footer = () => {
 		<footer>
 			<div className="footer-container">
 				<div className="item-footer">
-					<img
-						className="noUserSelect"
-						loading="lazy"
-						src="/img/lw.png"
-						alt="logo"
-					/>
+					<Link href="/">
+						<a className="item-footer-logo">
+							<img
+								className="noUserSelect"
+								loading="lazy"
+								src="/img/lw.png"
+								alt="Abstract Code"
+							/>
+						</a>
+					</Link>
 					<ul>
 						<li>
-							<Link href="">
-								<a className="social-link">
-									<img src="/img/instagram.svg" alt="instagram" />
-									<span>Instagram</span>
-								</a>
-							</Link>
+							<a
+								href="https://www.instagram.com/abstractcode/"
+								className="social-link"
+								target="_blank"
+							>
+								<img src="/img/instagram.svg" alt="instagram" />
+								<span>Instagram</span>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -30,7 +36,7 @@ const Footer = () => {
 						</span>
 						<ul>
 							<li>
-								<Link href="/web">
+								<Link href="/desarrollo-web">
 									<a>Desarrollo Web</a>
 								</Link>
 							</li>
@@ -59,7 +65,7 @@ const Footer = () => {
 								</Link>
 							</li>
 							<li>
-								<Link href="">
+								<Link href="/privacy">
 									<a>Legal</a>
 								</Link>
 							</li>

@@ -23,11 +23,11 @@ const Navbar = () => {
 	return (
 		<header>
 			<div className="barra-menu">
-				<img
-					className="logo noUserSelect"
-					src="/img/LogoWhite.svg"
-					alt="Abstract Code"
-				/>
+				<Link href="/">
+					<a className="logo noUserSelect">
+						<img src="/img/LogoWhite.svg" alt="Abstract Code" />
+					</a>
+				</Link>
 				<div id="hamburger-icon" className={stateBurger} onClick={toggleMenu}>
 					<span className="line line-1"></span>
 					<span className="line line-2"></span>
@@ -48,7 +48,7 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/web">
+							<Link href="/desarrollo-web">
 								<a onClick={toggleMenu}>Desarrollo web</a>
 							</Link>
 						</li>

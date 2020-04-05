@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import '../styles/index.css'
 import '../styles/scroll-icon.css'
 import Layout from '../components/Layout'
@@ -8,14 +7,6 @@ import Link from 'next/link'
 const Home = () => {
 	return (
 		<React.Fragment>
-			<Head>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0, user-scalable=no"
-				></meta>
-				<link rel="icon" href="/img/LogoBlack.svg" />
-				<title>Abstract Code</title>
-			</Head>
 			<Layout>
 				<section className="hero">
 					<div className="info-hero">
@@ -26,11 +17,11 @@ const Home = () => {
 							</div>
 							<div className="hero-title">
 								<h1>
-									Lorem ipsum dolor, <br />
-									sit amet consectetur adipisicing.
+									Te ayudamos a plasmar continuamente <br />
+									nuevas oportunidades de negocio en la <br /> era digital.
 								</h1>
 							</div>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+							<p>Lleva tu negocio a otro nivel.</p>
 							<Link href="">
 								<a className="button-transparent noUserSelect">
 									<div>Lorem</div>
@@ -51,7 +42,7 @@ const Home = () => {
 							<br />
 							<ul>
 								<li>
-									<Link href="/web">
+									<Link href="/desarrollo-web">
 										<a>Desarrollo Web</a>
 									</Link>
 								</li>
