@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
 }
 
 *::selection {
@@ -462,6 +463,28 @@ input[type='submit'] {
 	font-weight: bold;
 	color: white;
 	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.acepto-label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.acepto-label a {
+	color: black;
+	font-weight: bold;
+}
+
+.form-checkbox {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.form-checkbox input {
+	margin-right: 10px;
 }
 
 input[type='submit']:hover {
@@ -490,8 +513,7 @@ input[type='submit']:hover {
 }
 
 .web-dev h1 {
-	font-weight: 600;
-	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
 	font-size: 3.5em;
 }
 
@@ -680,9 +702,8 @@ input[type='submit']:hover {
 		height: 150px;
 	}
 	.web-dev h1 {
-		font-weight: 600;
-		font-family: 'Raleway', sans-serif;
-		font-size: 2.5em;
+		font-weight: bold;
+		font-size: 1.5em;
 	}
 	.container-privacy {
 		padding: 0 30px;

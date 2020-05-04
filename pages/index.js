@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/index.css'
 import '../styles/scroll-icon.css'
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import axios from 'axios'
 
 const Home = () => {
+	const [name, setName] = useState('')
+	const [email, setEmail] = useState('')
+	const [telefono, setTelefono] = useState('')
+	const [pais, setPais] = useState('')
+	const [mensaje, setMensaje] = useState('')
+
 	const onSubmit = (e) => {
 		e.preventDefault()
+	}
+
+	const PostData = async () => {
+		/* await axios.post('').then */
 	}
 
 	return (
@@ -26,9 +37,9 @@ const Home = () => {
 								</h1>
 							</div>
 							<p>Lleva tu negocio a otro nivel.</p>
-							<Link href="">
+							<Link href="#contacto">
 								<a className="button-transparent noUserSelect">
-									<div>Descubre más</div>
+									<div>Contáctanos</div>
 								</a>
 							</Link>
 						</div>
@@ -75,7 +86,7 @@ const Home = () => {
 						</p>
 						<Link href="">
 							<a className="button-black noUserSelect">
-								<div>Más detalles</div>
+								<div>Contáctanos</div>
 							</a>
 						</Link>
 					</div>
@@ -108,7 +119,7 @@ const Home = () => {
 						</p>
 						<Link href="">
 							<a className="button-black noUserSelect">
-								<div>Ver servicio</div>
+								<div>Contáctanos</div>
 							</a>
 						</Link>
 					</div>
@@ -128,7 +139,7 @@ const Home = () => {
 						</p>
 						<Link href="">
 							<a className="button-black noUserSelect">
-								<div>Ver servicio</div>
+								<div>Contáctanos</div>
 							</a>
 						</Link>
 					</div>
@@ -157,7 +168,7 @@ const Home = () => {
 						<span>— Bill Gates, Microsoft Founder</span>
 					</div>
 				</section>
-				<section className="info-landing gray wrap-reverse">
+				<section id="contacto" className="info-landing gray wrap-reverse">
 					<img
 						className="noUserSelect img-info-landing"
 						loading="lazy"
@@ -169,11 +180,68 @@ const Home = () => {
 							<h1>Contacto</h1>
 							<span>Sobre</span>
 							<br />
-							<input placeholder="Nombre" type="text" name="" id="" />
-							<input placeholder="E-mail" type="email" name="" id="" />
-							<input placeholder="Teléfono" type="number" name="" id="" />
-							<input placeholder="País" type="text" name="" id="" />
-							<textarea placeholder="Mensaje" name="" id="" rows="5"></textarea>
+							<input
+								required
+								placeholder="Nombre"
+								type="text"
+								value={name}
+								onChange={(e) => {
+									setName(e.target.value)
+								}}
+							/>
+							<input
+								required
+								value={email}
+								placeholder="E-mail"
+								type="email"
+								onChange={(e) => {
+									setEmail(e.target.value)
+								}}
+							/>
+							<input
+								required
+								value={telefono}
+								placeholder="Teléfono"
+								type="number"
+								onChange={(e) => {
+									setTelefono(e.target.value)
+								}}
+							/>
+							<input
+								required
+								value={pais}
+								placeholder="País"
+								type="text"
+								onChange={(e) => {
+									setPais(e.target.value)
+								}}
+							/>
+							<textarea
+								required
+								value={mensaje}
+								placeholder="Mensaje"
+								rows="5"
+								onChange={(e) => {
+									setMensaje(e.target.value)
+								}}
+							></textarea>
+							<div className="form-checkbox">
+								<input
+									type="checkbox"
+									id="aceptar"
+									required
+									name="aceptar"
+									value="aceptar"
+								/>
+								<label className="acepto-label" for="aceptar">
+									Acepto la&nbsp;
+									<Link href="/privacy">
+										<a className="noUserSelect" target="_blank">
+											<div> Política de privacidad</div>
+										</a>
+									</Link>
+								</label>
+							</div>
 							<input type="submit" value="Enviar" />
 						</form>
 					</div>
