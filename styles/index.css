@@ -152,7 +152,7 @@ li {
 	background: transparent;
 	border-radius: 5px;
 	height: 40px;
-	width: 150px;
+	width: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -294,7 +294,7 @@ li {
 	pointer-events: none;
 }
 .web-img-landing {
-	height: 100%;
+	height: 85%;
 	margin-right: 5%;
 	pointer-events: none;
 }
@@ -555,6 +555,20 @@ input[type='submit']:hover {
 	font-family: 'Raleway', sans-serif;
 }
 
+.copyright span {
+	color: #646464;
+	font-size: 14px;
+}
+
+.texto-landing {
+	width: 90%;
+}
+
+.img-info-landing.img-ui-ux {
+	width: 30%;
+	margin-left: 10%;
+}
+
 @media screen and (max-width: 1024px) {
 	:root {
 		--width-nav: 0;
@@ -586,12 +600,14 @@ input[type='submit']:hover {
 	}
 
 	.logo {
-		width: 7%;
-		pointer-events: none;
+		width: 30px;
 	}
 
 	.bandera {
 		display: none;
+	}
+	.texto-landing {
+		width: initial;
 	}
 }
 @media screen and (max-width: 768px) {
@@ -603,11 +619,11 @@ input[type='submit']:hover {
 	}
 	.text-info {
 		width: 100%;
+		margin-bottom: 50px;
 	}
-
 	.info-landing {
-		height: 900px;
-		padding: 20px;
+		height: initial;
+		padding: 60px 20px;
 	}
 	.img-info-landing {
 		width: 100%;
@@ -630,11 +646,12 @@ input[type='submit']:hover {
 		line-height: 1;
 	}
 	.frase {
-		height: 650px;
-		padding: 20px;
+		height: initial;
+		padding: 60px 20px;
 	}
 	.frase img {
 		width: 90%;
+		margin-bottom: 40px;
 	}
 	.texto-frase {
 		width: 100%;
@@ -669,6 +686,13 @@ input[type='submit']:hover {
 	}
 	.container-privacy {
 		padding: 0 30px;
+	}
+	.web-img-landing {
+		margin: 0;
+	}
+	.img-info-landing.img-ui-ux {
+		width: 100%;
+		margin-left: 65px;
 	}
 }
 @media screen and (max-width: 480px) {

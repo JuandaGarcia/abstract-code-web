@@ -74,7 +74,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="copyright">
-				<span>© Abstract Code 2020</span>
+				<span>© Copyright 2020 Abstract Code.</span>
 			</div>
 		</footer>
 	)

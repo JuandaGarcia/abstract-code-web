@@ -35,7 +35,7 @@ const Navbar = () => {
 				</div>
 				<img
 					className="bandera noUserSelect"
-					src="/img/Colombia.svg"
+					src="/img/instagram.svg"
 					alt="Abstract Code"
 				/>
 			</div>
