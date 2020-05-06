@@ -10,7 +10,6 @@ const Footer = () => {
 						<a className="item-footer-logo">
 							<img
 								className="noUserSelect"
-								loading="lazy"
 								src="/img/lw.png"
 								alt="Abstract Code"
 							/>
@@ -36,12 +35,12 @@ const Footer = () => {
 						</span>
 						<ul>
 							<li>
-								<Link href="/desarrollo-web">
+								<Link href="/#web">
 									<a>Desarrollo Web</a>
 								</Link>
 							</li>
 							<li>
-								<Link href="">
+								<Link href="/#ui-ux">
 									<a>Diseño UI/UX</a>
 								</Link>
 							</li>
@@ -55,7 +54,7 @@ const Footer = () => {
 						</span>
 						<ul>
 							<li>
-								<Link href="">
+								<Link href="/#contacto">
 									<a>Contacto</a>
 								</Link>
 							</li>

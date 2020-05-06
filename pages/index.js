@@ -37,9 +37,9 @@ const Home = () => {
 								</h1>
 							</div>
 							<p>Lleva tu negocio a otro nivel.</p>
-							<Link href="#contacto">
+							<Link href="#nosotros">
 								<a className="button-transparent noUserSelect">
-									<div>Contáctanos</div>
+									<div>Descubre más</div>
 								</a>
 							</Link>
 						</div>
@@ -57,12 +57,12 @@ const Home = () => {
 							<br />
 							<ul>
 								<li>
-									<Link href="/desarrollo-web">
+									<Link href="#web">
 										<a>Desarrollo Web</a>
 									</Link>
 								</li>
 								<li>
-									<Link href="">
+									<Link href="#ui-ux">
 										<a>Diseño UI/UX</a>
 									</Link>
 								</li>
@@ -72,7 +72,7 @@ const Home = () => {
 					</div>
 					<div className="scroll-icon"></div>
 				</section>
-				<section className="info-landing">
+				<section id="nosotros" className="info-landing">
 					<div className="text-info">
 						<span>Abstract Code</span>
 						<h1>Sobre nosostros</h1>
@@ -84,7 +84,7 @@ const Home = () => {
 							estándares de calidad basados en tecnologías ligeras que permiten
 							a los usuarios tener una grata experiencia en Internet.
 						</p>
-						<Link href="">
+						<Link href="#contacto">
 							<a className="button-black noUserSelect">
 								<div>Contáctanos</div>
 							</a>
@@ -92,21 +92,21 @@ const Home = () => {
 					</div>
 					<img
 						className="noUserSelect img-info-landing"
-						loading="lazy"
 						src="/img/info.png"
 						alt="img"
 					/>
 				</section>
-				<section className="info-landing yellow wrap-reverse">
+				<section id="web" className="info-landing yellow wrap-reverse">
 					<img
 						className="noUserSelect web-img-landing"
-						loading="lazy"
 						src="/img/web.png"
 						alt="img"
 					/>
 					<div className="text-info">
 						<span>Abstract Code</span>
-						<h1>Desarrollo de sitios y aplicaciones Web</h1>
+						<h1 className="disminuir">
+							Desarrollo de sitios y aplicaciones Web
+						</h1>
 						<br />
 						<br />
 						<p>
@@ -117,14 +117,14 @@ const Home = () => {
 							tanto al cliente como al consumidor a través del arte, el diseño y
 							la tecnología.
 						</p>
-						<Link href="">
+						<Link href="#contacto">
 							<a className="button-black noUserSelect">
 								<div>Contáctanos</div>
 							</a>
 						</Link>
 					</div>
 				</section>
-				<section className="info-landing gray ui-ux">
+				<section id="ui-ux" className="info-landing gray ui-ux">
 					<div className="text-info margin">
 						<span>Abstract Code</span>
 						<h1>Diseño de Interfaces de Usuario UI / UX</h1>
@@ -137,7 +137,7 @@ const Home = () => {
 							el proceso de conversión según los objetivos de negocio de la
 							empresa.
 						</p>
-						<Link href="">
+						<Link href="#contacto">
 							<a className="button-black noUserSelect">
 								<div>Contáctanos</div>
 							</a>
@@ -145,18 +145,12 @@ const Home = () => {
 					</div>
 					<img
 						className="noUserSelect img-info-landing img-ui-ux"
-						loading="lazy"
 						src="/img/ui-ux.png"
 						alt="img"
 					/>
 				</section>
 				<section className="frase">
-					<img
-						className="noUserSelect"
-						src="/img/bill.jpg"
-						loading="lazy"
-						alt="Bill Gates"
-					/>
+					<img className="noUserSelect" src="/img/bill.jpg" alt="Bill Gates" />
 					<div className="texto-frase">
 						<p>
 							<strong>
@@ -171,14 +165,13 @@ const Home = () => {
 				<section id="contacto" className="info-landing gray wrap-reverse">
 					<img
 						className="noUserSelect img-info-landing"
-						loading="lazy"
 						src="/img/banana.jpg"
 						alt="img"
 					/>
 					<div className="text-info aling-form">
 						<form onSubmit={(e) => onSubmit(e)}>
 							<h1>Contacto</h1>
-							<span>Sobre</span>
+							<span>Déjanos todas tus dudas.</span>
 							<br />
 							<input
 								required
@@ -226,18 +219,18 @@ const Home = () => {
 								}}
 							></textarea>
 							<div className="form-checkbox">
-								<input
-									type="checkbox"
-									id="aceptar"
-									required
-									name="aceptar"
-									value="aceptar"
-								/>
-								<label className="acepto-label" for="aceptar">
+								<label className="acepto-label">
+									<input
+										type="checkbox"
+										id="aceptar"
+										required
+										name="aceptar"
+										value="aceptar"
+									/>
 									Acepto la&nbsp;
 									<Link href="/privacy">
 										<a className="noUserSelect" target="_blank">
-											<div> Política de privacidad</div>
+											<div> Política de privacidad.</div>
 										</a>
 									</Link>
 								</label>

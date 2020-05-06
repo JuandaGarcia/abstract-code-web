@@ -33,11 +33,17 @@ const Navbar = () => {
 					<span className="line line-2"></span>
 					<span className="line line-3"></span>
 				</div>
-				<img
-					className="bandera noUserSelect"
-					src="/img/instagram.svg"
-					alt="Abstract Code"
-				/>
+				<a
+					href="https://www.instagram.com/abstractcode/"
+					className="instagram-nav"
+					target="_blank"
+				>
+					<img
+						className="bandera noUserSelect"
+						src="/img/instagram.svg"
+						alt="Abstract Code"
+					/>
+				</a>
 			</div>
 			<div className={`menu ${activeMenu}`}>
 				<nav>
@@ -48,17 +54,17 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/desarrollo-web">
+							<Link href="/#web">
 								<a onClick={toggleMenu}>Desarrollo web</a>
 							</Link>
 						</li>
 						<li>
-							<Link href="">
+							<Link href="/#ui-ux">
 								<a onClick={toggleMenu}>Diseño UI/UX</a>
 							</Link>
 						</li>
 						<li>
-							<Link href="">
+							<Link href="/#contacto">
 								<a onClick={toggleMenu}>Contacto</a>
 							</Link>
 						</li>

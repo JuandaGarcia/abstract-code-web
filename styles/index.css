@@ -114,6 +114,12 @@ li {
 	width: 50%;
 }
 
+.instagram-nav {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
 .bandera {
 	width: 30%;
 	pointer-events: none;
@@ -169,9 +175,9 @@ li {
 .button-black {
 	border: 3px solid black;
 	background: transparent;
-	border-radius: 10px;
+	border-radius: 5px;
 	height: 40px;
-	width: 150px;
+	width: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -295,7 +301,7 @@ li {
 	pointer-events: none;
 }
 .web-img-landing {
-	height: 85%;
+	width: 30%;
 	margin-right: 5%;
 	pointer-events: none;
 }
@@ -591,6 +597,10 @@ input[type='submit']:hover {
 	margin-left: 10%;
 }
 
+#ui-ux {
+	overflow: hidden;
+}
+
 @media screen and (max-width: 1024px) {
 	:root {
 		--width-nav: 0;
@@ -625,11 +635,18 @@ input[type='submit']:hover {
 		width: 30px;
 	}
 
+	.instagram-nav {
+		display: none;
+	}
 	.bandera {
 		display: none;
 	}
 	.texto-landing {
 		width: initial;
+	}
+
+	.disminuir {
+		font-size: 2em !important;
 	}
 }
 @media screen and (max-width: 768px) {
