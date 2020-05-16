@@ -1,12 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/index.css'
 import '../styles/scroll-icon.css'
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import Swal from 'sweetalert2'
 
 const Home = () => {
+	const [name, setName] = useState('')
+	const [email, setEmail] = useState('')
+	const [telefono, setTelefono] = useState('')
+	const [mensaje, setMensaje] = useState('')
+	const [openVideo, setOpenVideo] = useState(false)
+
 	const onSubmit = (e) => {
 		e.preventDefault()
+		PostData()
+	}
+
+	const PostData = async () => {
+		let myHeaders = new Headers()
+		myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
+
+		let urlencoded = new URLSearchParams()
+		urlencoded.append('nombre', name)
+		urlencoded.append('email', email)
+		urlencoded.append('telefono', telefono)
+		urlencoded.append('mensaje', mensaje)
+
+		let requestOptions = {
+			mode: 'no-cors',
+			method: 'POST',
+			headers: myHeaders,
+			body: urlencoded,
+			redirect: 'follow',
+		}
+
+		await fetch('http://servicios.juandagarcia.com/email.php', requestOptions)
+
+		setName('')
+		setEmail('')
+		setTelefono('')
+		setMensaje('')
+
+		Swal.fire({
+			position: 'center',
+			icon: 'success',
+			title:
+				'El mensaje se envió con éxito, si no recibes respuesta en 24 horas puedes escribirnos a través del WhatsApp +57 3163646650',
+			showConfirmButton: false,
+		})
 	}
 
 	return (
@@ -26,7 +68,7 @@ const Home = () => {
 								</h1>
 							</div>
 							<p>Lleva tu negocio a otro nivel.</p>
-							<Link href="">
+							<Link href="#nosotros">
 								<a className="button-transparent noUserSelect">
 									<div>Descubre más</div>
 								</a>
@@ -46,22 +88,39 @@ const Home = () => {
 							<br />
 							<ul>
 								<li>
-									<Link href="/desarrollo-web">
+									<Link href="#web">
 										<a>Desarrollo Web</a>
 									</Link>
 								</li>
 								<li>
-									<Link href="">
+									<Link href="#ui-ux">
 										<a>Diseño UI/UX</a>
 									</Link>
 								</li>
 							</ul>
 						</div>
-						<img src="/img/video.jpg" alt="video" />
+						<img
+							onClick={() => setOpenVideo(true)}
+							src="/img/video.jpg"
+							alt="video"
+						/>
+						{openVideo ? (
+							<div onClick={() => setOpenVideo(false)} className="video-modal">
+								<div>
+									<span>El video no esta disponible en estos momentos 🤪</span>
+									<button
+										onClick={() => setOpenVideo(false)}
+										className="button-transparent noUserSelect"
+									>
+										<div>Cerrar</div>
+									</button>
+								</div>
+							</div>
+						) : null}
 					</div>
 					<div className="scroll-icon"></div>
 				</section>
-				<section className="info-landing">
+				<section id="nosotros" className="info-landing">
 					<div className="text-info">
 						<span>Abstract Code</span>
 						<h1>Sobre nosostros</h1>
@@ -73,29 +132,29 @@ const Home = () => {
 							estándares de calidad basados en tecnologías ligeras que permiten
 							a los usuarios tener una grata experiencia en Internet.
 						</p>
-						<Link href="">
+						<Link href="#contacto">
 							<a className="button-black noUserSelect">
-								<div>Más detalles</div>
+								<div>Contáctanos</div>
 							</a>
 						</Link>
 					</div>
 					<img
 						className="noUserSelect img-info-landing"
-						loading="lazy"
 						src="/img/info.png"
 						alt="img"
 					/>
 				</section>
-				<section className="info-landing yellow wrap-reverse">
+				<section id="web" className="info-landing yellow wrap-reverse">
 					<img
 						className="noUserSelect web-img-landing"
-						loading="lazy"
 						src="/img/web.png"
 						alt="img"
 					/>
 					<div className="text-info">
 						<span>Abstract Code</span>
-						<h1>Desarrollo de sitios y aplicaciones Web</h1>
+						<h1 className="disminuir">
+							Desarrollo de sitios y aplicaciones Web
+						</h1>
 						<br />
 						<br />
 						<p>
@@ -106,14 +165,14 @@ const Home = () => {
 							tanto al cliente como al consumidor a través del arte, el diseño y
 							la tecnología.
 						</p>
-						<Link href="">
+						<Link href="#contacto">
 							<a className="button-black noUserSelect">
-								<div>Ver servicio</div>
+								<div>Contáctanos</div>
 							</a>
 						</Link>
 					</div>
 				</section>
-				<section className="info-landing gray ui-ux">
+				<section id="ui-ux" className="info-landing gray ui-ux">
 					<div className="text-info margin">
 						<span>Abstract Code</span>
 						<h1>Diseño de Interfaces de Usuario UI / UX</h1>
@@ -126,26 +185,20 @@ const Home = () => {
 							el proceso de conversión según los objetivos de negocio de la
 							empresa.
 						</p>
-						<Link href="">
+						<Link href="#contacto">
 							<a className="button-black noUserSelect">
-								<div>Ver servicio</div>
+								<div>Contáctanos</div>
 							</a>
 						</Link>
 					</div>
 					<img
 						className="noUserSelect img-info-landing img-ui-ux"
-						loading="lazy"
 						src="/img/ui-ux.png"
 						alt="img"
 					/>
 				</section>
 				<section className="frase">
-					<img
-						className="noUserSelect"
-						src="/img/bill.jpg"
-						loading="lazy"
-						alt="Bill Gates"
-					/>
+					<img className="noUserSelect" src="/img/bill.jpg" alt="Bill Gates" />
 					<div className="texto-frase">
 						<p>
 							<strong>
@@ -157,23 +210,70 @@ const Home = () => {
 						<span>— Bill Gates, Microsoft Founder</span>
 					</div>
 				</section>
-				<section className="info-landing gray wrap-reverse">
+				<section id="contacto" className="info-landing gray wrap-reverse">
 					<img
 						className="noUserSelect img-info-landing"
-						loading="lazy"
 						src="/img/banana.jpg"
 						alt="img"
 					/>
 					<div className="text-info aling-form">
 						<form onSubmit={(e) => onSubmit(e)}>
 							<h1>Contacto</h1>
-							<span>Sobre</span>
+							<span>Déjanos todas tus dudas.</span>
 							<br />
-							<input placeholder="Nombre" type="text" name="" id="" />
-							<input placeholder="E-mail" type="email" name="" id="" />
-							<input placeholder="Teléfono" type="number" name="" id="" />
-							<input placeholder="País" type="text" name="" id="" />
-							<textarea placeholder="Mensaje" name="" id="" rows="5"></textarea>
+							<input
+								required
+								placeholder="Nombre"
+								type="text"
+								value={name}
+								onChange={(e) => {
+									setName(e.target.value)
+								}}
+							/>
+							<input
+								required
+								value={email}
+								placeholder="E-mail"
+								type="email"
+								onChange={(e) => {
+									setEmail(e.target.value)
+								}}
+							/>
+							<input
+								required
+								value={telefono}
+								placeholder="Teléfono"
+								type="number"
+								onChange={(e) => {
+									setTelefono(e.target.value)
+								}}
+							/>
+							<textarea
+								required
+								value={mensaje}
+								placeholder="Mensaje"
+								rows="5"
+								onChange={(e) => {
+									setMensaje(e.target.value)
+								}}
+							></textarea>
+							<div className="form-checkbox">
+								<label className="acepto-label">
+									<input
+										type="checkbox"
+										id="aceptar"
+										required
+										name="aceptar"
+										value="aceptar"
+									/>
+									Acepto la&nbsp;
+									<Link href="/privacy">
+										<a className="noUserSelect" target="_blank">
+											<div> Política de privacidad.</div>
+										</a>
+									</Link>
+								</label>
+							</div>
 							<input type="submit" value="Enviar" />
 						</form>
 					</div>

@@ -10,7 +10,6 @@ const Footer = () => {
 						<a className="item-footer-logo">
 							<img
 								className="noUserSelect"
-								loading="lazy"
 								src="/img/lw.png"
 								alt="Abstract Code"
 							/>
@@ -27,6 +26,16 @@ const Footer = () => {
 								<span>Instagram</span>
 							</a>
 						</li>
+						<li>
+							<a
+								href="https://wa.link/2s23ta"
+								className="social-link"
+								target="_blank"
+							>
+								<img src="/img/whatsapp.svg" alt="WhatsApp" />
+								<span>WhatsApp</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div className="item-footer">
@@ -36,12 +45,12 @@ const Footer = () => {
 						</span>
 						<ul>
 							<li>
-								<Link href="/desarrollo-web">
+								<Link href="/#web">
 									<a>Desarrollo Web</a>
 								</Link>
 							</li>
 							<li>
-								<Link href="">
+								<Link href="/#ui-ux">
 									<a>Diseño UI/UX</a>
 								</Link>
 							</li>
@@ -55,15 +64,15 @@ const Footer = () => {
 						</span>
 						<ul>
 							<li>
-								<Link href="">
+								<Link href="/#contacto">
 									<a>Contacto</a>
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link href="">
 									<a>Trabaja con Nosotros</a>
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link href="/privacy">
 									<a>Legal</a>
