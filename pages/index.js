@@ -3,21 +3,52 @@ import '../styles/index.css'
 import '../styles/scroll-icon.css'
 import Layout from '../components/Layout'
 import Link from 'next/link'
-import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const Home = () => {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [telefono, setTelefono] = useState('')
-	const [pais, setPais] = useState('')
 	const [mensaje, setMensaje] = useState('')
+	const [openVideo, setOpenVideo] = useState(false)
 
 	const onSubmit = (e) => {
 		e.preventDefault()
+		PostData()
 	}
 
 	const PostData = async () => {
-		/* await axios.post('').then */
+		let myHeaders = new Headers()
+		myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
+
+		let urlencoded = new URLSearchParams()
+		urlencoded.append('nombre', name)
+		urlencoded.append('email', email)
+		urlencoded.append('telefono', telefono)
+		urlencoded.append('mensaje', mensaje)
+
+		let requestOptions = {
+			mode: 'no-cors',
+			method: 'POST',
+			headers: myHeaders,
+			body: urlencoded,
+			redirect: 'follow',
+		}
+
+		await fetch('http://servicios.juandagarcia.com/email.php', requestOptions)
+
+		setName('')
+		setEmail('')
+		setTelefono('')
+		setMensaje('')
+
+		Swal.fire({
+			position: 'center',
+			icon: 'success',
+			title:
+				'El mensaje se envió con éxito, si no recibes respuesta en 24 horas puedes escribirnos a través del WhatsApp +57 3163646650',
+			showConfirmButton: false,
+		})
 	}
 
 	return (
@@ -68,7 +99,24 @@ const Home = () => {
 								</li>
 							</ul>
 						</div>
-						<img src="/img/video.jpg" alt="video" />
+						<img
+							onClick={() => setOpenVideo(true)}
+							src="/img/video.jpg"
+							alt="video"
+						/>
+						{openVideo ? (
+							<div onClick={() => setOpenVideo(false)} className="video-modal">
+								<div>
+									<span>El video no esta disponible en estos momentos 🤪</span>
+									<button
+										onClick={() => setOpenVideo(false)}
+										className="button-transparent noUserSelect"
+									>
+										<div>Cerrar</div>
+									</button>
+								</div>
+							</div>
+						) : null}
 					</div>
 					<div className="scroll-icon"></div>
 				</section>
@@ -198,15 +246,6 @@ const Home = () => {
 								type="number"
 								onChange={(e) => {
 									setTelefono(e.target.value)
-								}}
-							/>
-							<input
-								required
-								value={pais}
-								placeholder="País"
-								type="text"
-								onChange={(e) => {
-									setPais(e.target.value)
 								}}
 							/>
 							<textarea

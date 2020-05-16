@@ -26,6 +26,16 @@ const Footer = () => {
 								<span>Instagram</span>
 							</a>
 						</li>
+						<li>
+							<a
+								href="https://wa.link/2s23ta"
+								className="social-link"
+								target="_blank"
+							>
+								<img src="/img/whatsapp.svg" alt="WhatsApp" />
+								<span>WhatsApp</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div className="item-footer">
@@ -58,11 +68,11 @@ const Footer = () => {
 									<a>Contacto</a>
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link href="">
 									<a>Trabaja con Nosotros</a>
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link href="/privacy">
 									<a>Legal</a>
