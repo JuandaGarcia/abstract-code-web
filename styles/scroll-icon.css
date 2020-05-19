@@ -16,6 +16,7 @@
 	position: absolute;
 	left: 50%;
 	bottom: 40px;
+	transform: translate(-50%, 0%);
 }
 
 .scroll-icon:hover {

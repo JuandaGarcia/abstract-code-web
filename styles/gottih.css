@@ -1,0 +1,80 @@
+.gottih-page-contaiiner {
+	width: calc(100% - var(--width-nav));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: var(--width-nav);
+	color: rgb(26, 26, 26);
+	position: relative;
+}
+
+.gottih-page-contaiiner h1 {
+	font-size: 10em;
+}
+.gottih-page-contaiiner span {
+	font-size: 1.5em;
+}
+.gottih-page-contaiiner p {
+	text-align: center;
+}
+
+.gottih-parrafo {
+	margin-top: 30px;
+	width: 50%;
+	margin-bottom: 100px;
+}
+
+.img-hero-gottih {
+	width: 100%;
+}
+
+.img-hero-gottih img {
+	width: 100%;
+}
+
+.logo-gottih-ac {
+	height: 75vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-gottih-ac img {
+	width: 30%;
+	pointer-events: none;
+}
+
+.contenedor-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.contenedor-video video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+	.gottih-page-contaiiner {
+		padding-top: 80px;
+	}
+	.gottih-page-contaiiner h1 {
+		font-size: 6.5em;
+	}
+	.gottih-page-contaiiner span {
+		font-size: 1.2em;
+	}
+	.gottih-parrafo {
+		width: 80%;
+	}
+	.logo-gottih-ac {
+		height: 40vh;
+	}
+}

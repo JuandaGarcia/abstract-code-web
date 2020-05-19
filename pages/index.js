@@ -98,6 +98,20 @@ const Home = () => {
 									</Link>
 								</li>
 							</ul>
+							<br />
+							<br />
+							<span>
+								<strong>Nuestros Desarrollos</strong>
+							</span>
+							<br />
+							<br />
+							<ul>
+								<li>
+									<Link href="/gottih">
+										<a>Gottih</a>
+									</Link>
+								</li>
+							</ul>
 						</div>
 						<img
 							onClick={() => setOpenVideo(true)}

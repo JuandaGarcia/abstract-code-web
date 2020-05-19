@@ -28,7 +28,7 @@ const Footer = () => {
 						</li>
 						<li>
 							<a
-								href="https://wa.link/2s23ta"
+								href="https://wa.me/573163646650"
 								className="social-link"
 								target="_blank"
 							>
