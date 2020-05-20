@@ -22,6 +22,14 @@
 	margin-top: 30px;
 	width: 50%;
 	margin-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.margin {
+	margin-top: 100px;
 }
 
 .img-hero-gottih {
@@ -30,6 +38,25 @@
 
 .img-hero-gottih img {
 	width: 100%;
+}
+
+.img-web-gottih {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.macbook {
+	width: 50%;
+}
+
+.pagos-img {
+	width: 15%;
+	position: absolute;
+	-webkit-animation: bounce-follower 2.5s ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	animation-delay: 0.5s;
+	transform: translate(90%, 0px);
 }
 
 .logo-gottih-ac {
@@ -61,6 +88,27 @@
 	height: 100%;
 }
 
+.color-btn {
+	background: linear-gradient(to right, #434343 0%, black 100%);
+	color: white;
+	font-weight: bold;
+	width: 200px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px;
+	margin-top: 20px;
+	transition: all 0.1s;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.color-btn:hover {
+	box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (max-width: 1024px) {
 	.gottih-page-contaiiner {
 		padding-top: 80px;
@@ -73,8 +121,31 @@
 	}
 	.gottih-parrafo {
 		width: 80%;
+		margin-bottom: 50px;
+	}
+
+	.margin {
+		margin-top: 50px;
 	}
 	.logo-gottih-ac {
 		height: 40vh;
+	}
+	.macbook {
+		width: 70%;
+	}
+	.pagos-img {
+		width: 20%;
+	}
+}
+
+@-webkit-keyframes bounce-follower {
+	0% {
+		transform: translate(90%, 0px);
+	}
+	50% {
+		transform: translate(90%, 20px);
+	}
+	100% {
+		transform: translate(90%, 0px);
 	}
 }
