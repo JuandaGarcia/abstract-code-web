@@ -54,6 +54,16 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li>
+							<Link href="/#contacto">
+								<a onClick={toggleMenu}>Contacto</a>
+							</Link>
+						</li>
+					</ul>
+					<div className="title-navbar">
+						<span>Nuestros Servicios</span>
+					</div>
+					<ul>
+						<li>
 							<Link href="/#web">
 								<a onClick={toggleMenu}>Desarrollo web</a>
 							</Link>
@@ -63,9 +73,14 @@ const Navbar = () => {
 								<a onClick={toggleMenu}>Diseño UI/UX</a>
 							</Link>
 						</li>
+					</ul>
+					<div className="title-navbar">
+						<span>Nuestros Desarrollos</span>
+					</div>
+					<ul>
 						<li>
-							<Link href="/#contacto">
-								<a onClick={toggleMenu}>Contacto</a>
+							<Link href="/gottih">
+								<a onClick={toggleMenu}>Gottih</a>
 							</Link>
 						</li>
 					</ul>
