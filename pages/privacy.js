@@ -3,7 +3,10 @@ import '../styles/index.css'
 
 const Politica = () => {
 	return (
-		<Layout>
+		<Layout
+			title={' - Política de privacidad'}
+			MetaDescription={'Política de privacidad Abstract Code'}
+		>
 			<section className="web-dev">
 				<h1>Política de privacidad</h1>
 				<div className="web-dev-first-gif privacy"></div>

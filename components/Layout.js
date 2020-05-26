@@ -12,7 +12,8 @@ const Layout = (props) => {
 					content="width=device-width, initial-scale=1.0, user-scalable=no"
 				></meta>
 				<link rel="icon" href="/img/LogoBlack.svg" />
-				<title>Abstract Code</title>
+				<title>Abstract Code{props.title}</title>
+				<meta name="description" content={props.MetaDescription} />
 			</Head>
 			<Navbar />
 			{props.children}

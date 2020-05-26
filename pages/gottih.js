@@ -6,7 +6,10 @@ import Link from 'next/link'
 
 const Web = () => {
 	return (
-		<Layout>
+		<Layout
+			title={' - Gottih'}
+			MetaDescription="Gottih es un proyecto de camisetas con diseños animados mediante realidad aumentada desarrollado por nuestro equipo de ingeniería el cual se encargó de hacer todo el diseño y desarrollo tanto de del sitio web de distribución como de la aplicación móvil disponible para dispositivos Android."
+		>
 			<section className="gottih-page-contaiiner">
 				<div className="img-hero-gottih">
 					<img src="/img/gottih/camisetas.jpg" alt="Camisetas" />

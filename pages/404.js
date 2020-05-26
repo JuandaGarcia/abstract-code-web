@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const NotFound = () => {
 	return (
-		<Layout>
+		<Layout title={' - 404'} MetaDescription="404 not found">
 			<section className="not-found">
 				<div>
 					<div className="container-not-found">

@@ -53,7 +53,10 @@ const Home = () => {
 
 	return (
 		<React.Fragment>
-			<Layout>
+			<Layout
+				title={' - Desarrollo web a medida'}
+				MetaDescription="Somos una empresa especializada en diseño y desarrollo de sitios y aplicaciones web a la medida. Creamos productos software con altos estándares de calidad basados en tecnologías ligeras que permiten a los usuarios tener una grata experiencia en Internet."
+			>
 				<section className="hero">
 					<div className="info-hero">
 						<div className="color-bg-hero"></div>
