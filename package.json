@@ -1,19 +1,20 @@
 {
-  "name": "abstract-code-web",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "axios": "^0.19.2",
-    "framer-motion": "^1.11.0",
-    "next": "9.3.1",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
-    "sweetalert2": "^9.10.12"
-  }
+	"name": "abstract-code-web",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"prod": "next export"
+	},
+	"dependencies": {
+		"@zeit/next-css": "^1.0.1",
+		"axios": "^0.19.2",
+		"framer-motion": "^1.11.0",
+		"next": "9.3.1",
+		"react": "16.13.0",
+		"react-dom": "16.13.0",
+		"sweetalert2": "^9.10.12"
+	}
 }
