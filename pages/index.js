@@ -35,7 +35,7 @@ const Home = () => {
 			redirect: 'follow',
 		}
 
-		await fetch('http://servicios.juandagarcia.com/email.php', requestOptions)
+		await fetch('https://servicios.juandagarcia.com/email.php', requestOptions)
 
 		setName('')
 		setEmail('')
