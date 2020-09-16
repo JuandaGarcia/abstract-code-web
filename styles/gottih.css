@@ -4,16 +4,18 @@
 	flex-direction: column;
 	align-items: center;
 	padding-left: var(--width-nav);
-	color: rgb(26, 26, 26);
+	color: #1a1a1a;
 	position: relative;
 }
 
 .gottih-page-contaiiner h1 {
 	font-size: 10em;
 }
+
 .gottih-page-contaiiner span {
 	font-size: 1.5em;
 }
+
 .gottih-page-contaiiner p {
 	text-align: center;
 }
@@ -46,6 +48,7 @@
 	justify-content: center;
 	position: relative;
 }
+
 .macbook {
 	width: 50%;
 }
@@ -113,12 +116,15 @@
 	.gottih-page-contaiiner {
 		padding-top: 80px;
 	}
+
 	.gottih-page-contaiiner h1 {
 		font-size: 6.5em;
 	}
+
 	.gottih-page-contaiiner span {
 		font-size: 1.2em;
 	}
+
 	.gottih-parrafo {
 		width: 80%;
 		margin-bottom: 50px;
@@ -127,17 +133,19 @@
 	.margin {
 		margin-top: 50px;
 	}
+
 	.logo-gottih-ac {
 		height: 40vh;
 	}
+
 	.macbook {
 		width: 70%;
 	}
+
 	.pagos-img {
 		width: 20%;
 	}
 }
-
 @-webkit-keyframes bounce-follower {
 	0% {
 		transform: translate(90%, 0px);

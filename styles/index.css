@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
 	margin: 0;
 	padding: 0;
@@ -177,6 +176,7 @@ li {
 .button-transparent:hover {
 	background: rgba(255, 255, 255, 0.1);
 }
+
 .button-black {
 	border: 3px solid black;
 	background: transparent;
@@ -305,6 +305,7 @@ li {
 	width: 40%;
 	pointer-events: none;
 }
+
 .web-img-landing {
 	width: 30%;
 	margin-right: 5%;
@@ -326,6 +327,7 @@ li {
 .yellow {
 	background: #ffc700;
 }
+
 .gray {
 	background: #eeeeee;
 }
@@ -379,6 +381,7 @@ footer {
 .item-footer ul li a {
 	color: white;
 }
+
 .item-footer ul li a:hover {
 	text-decoration-line: underline;
 }
@@ -401,6 +404,7 @@ nav {
 nav ul a {
 	color: white;
 }
+
 nav ul a:hover {
 	color: rgba(255, 255, 255, 0.7);
 }
@@ -434,6 +438,7 @@ input[type='number'] {
 	font-weight: bold;
 	margin-bottom: 20px;
 }
+
 textarea {
 	width: calc(100% - 24px);
 	height: 60px;
@@ -520,7 +525,7 @@ input[type='submit']:hover {
 	align-items: center;
 	padding: 100px 20%;
 	padding-left: calc(20% + var(--width-nav));
-	color: rgb(26, 26, 26);
+	color: #1a1a1a;
 }
 
 .web-dev h1 {
@@ -537,6 +542,7 @@ input[type='submit']:hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
 .web-dev-first-gif.privacy {
 	background: url('https://media1.giphy.com/media/9dFvgd4ID6ne0/giphy.gif?cid=ecf05e47b956ff2c2bae361868346b37154b866804ce0956&rid=giphy.gif');
 	background-position-y: -20px;
@@ -562,6 +568,7 @@ input[type='submit']:hover {
 	position: relative;
 	color: white;
 }
+
 .container-not-found {
 	position: absolute;
 	top: 0;
@@ -637,6 +644,14 @@ input[type='submit']:hover {
 		--width-nav: 0;
 	}
 
+	.services-video {
+		display: none;
+	}
+
+	.info-hero {
+		width: 100%;
+	}
+
 	.barra-menu {
 		bottom: initial;
 		right: 0;
@@ -652,7 +667,7 @@ input[type='submit']:hover {
 		left: 0;
 		right: 0;
 		width: initial;
-		background: rgba(30, 30, 30, 1);
+		background: #1e1e1e;
 		-webkit-backdrop-filter: initial;
 		backdrop-filter: initial;
 	}
@@ -669,9 +684,11 @@ input[type='submit']:hover {
 	.instagram-nav {
 		display: none;
 	}
+
 	.bandera {
 		display: none;
 	}
+
 	.texto-landing {
 		width: initial;
 	}
@@ -681,20 +698,16 @@ input[type='submit']:hover {
 	}
 }
 @media screen and (max-width: 768px) {
-	.services-video {
-		display: none;
-	}
-	.info-hero {
-		width: 100%;
-	}
 	.text-info {
 		width: 100%;
 		margin-bottom: 50px;
 	}
+
 	.info-landing {
 		height: initial;
 		padding: 60px 20px;
 	}
+
 	.img-info-landing {
 		width: 100%;
 	}
@@ -703,6 +716,7 @@ input[type='submit']:hover {
 		width: 100%;
 		height: initial;
 	}
+
 	.text-info h1 {
 		font-size: 2em;
 	}
@@ -715,50 +729,64 @@ input[type='submit']:hover {
 		font-size: 0.6em;
 		line-height: 1;
 	}
+
 	.frase {
 		height: initial;
 		padding: 60px 20px;
 	}
+
 	.frase img {
 		width: 90%;
 		margin-bottom: 40px;
 	}
+
 	.texto-frase {
 		width: 100%;
 	}
+
 	.texto-frase span {
 		font-size: 1em;
 	}
+
 	.texto-frase p {
 		font-size: 2em;
 	}
+
 	form {
 		width: 90%;
 	}
+
 	.footer-container {
 		justify-content: space-around;
 		font-size: 0.7em;
 	}
+
 	.item-footer {
 		width: 20%;
 		margin: 0;
 	}
+
 	.web-dev {
 		padding: 100px 0;
 	}
+
 	.web-dev-first-gif {
 		height: 150px;
 	}
+
 	.web-dev h1 {
 		font-weight: bold;
 		font-size: 1.5em;
 	}
+
 	.container-privacy {
 		padding: 0 30px;
 	}
+
 	.web-img-landing {
 		margin: 0;
 	}
+
 	.img-info-landing.img-ui-ux {
 		width: 100%;
 		margin-left: 65px;
@@ -768,6 +796,4 @@ input[type='submit']:hover {
 	.acepto-label {
 		font-size: 0.9em;
 	}
-}
-@media screen and (max-width: 320px) {
 }

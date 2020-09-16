@@ -50,7 +50,6 @@
 		opacity: 0;
 	}
 }
-
 @keyframes scroll-icon {
 	0% {
 		-webkit-transform: translateY(-12px);
