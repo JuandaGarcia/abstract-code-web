@@ -121,19 +121,18 @@ const Home = () => {
 							src="/img/video.jpg"
 							alt="video"
 						/>
-						{openVideo ? (
+						{openVideo && (
 							<div onClick={() => setOpenVideo(false)} className="video-modal">
-								<div>
-									<span>El video no esta disponible en estos momentos 🤪</span>
-									<button
-										onClick={() => setOpenVideo(false)}
-										className="button-transparent noUserSelect"
-									>
-										<div>Cerrar</div>
-									</button>
-								</div>
+								<iframe
+									width="60%"
+									height="65%"
+									src="https://www.youtube.com/embed/V37ZABGyNWs"
+									frameBorder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowFullScreen
+								></iframe>
 							</div>
-						) : null}
+						)}
 					</div>
 					<div className="scroll-icon"></div>
 				</section>
