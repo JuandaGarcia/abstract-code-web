@@ -51,13 +51,14 @@
 
 .macbook {
 	width: 50%;
+	height: 100%;
 }
 
 .pagos-img {
 	width: 15%;
 	position: absolute;
-	-webkit-animation: bounce-follower 2.5s ease-in-out;
-	-webkit-animation-iteration-count: infinite;
+	animation: bounce-follower 2.5s ease-in-out;
+	animation-iteration-count: infinite;
 	animation-delay: 0.5s;
 	transform: translate(90%, 0px);
 }
@@ -146,7 +147,7 @@
 		width: 20%;
 	}
 }
-@-webkit-keyframes bounce-follower {
+@keyframes bounce-follower {
 	0% {
 		transform: translate(90%, 0px);
 	}
